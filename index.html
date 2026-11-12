@@ -7132,6 +7132,109 @@
         font-size: 12.5px !important;
       }
     }
+
+/* NIPUNA 2026 — RESPONSIVE DESIGN REFINEMENT */
+:root { --radius:14px; --radius-lg:22px; --shadow-lg:0 22px 60px rgba(7,26,61,.13); }
+html { scroll-padding-top:90px; }
+body { -webkit-font-smoothing:antialiased; }
+button, input, select, textarea { font:inherit; }
+button, a { -webkit-tap-highlight-color:transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline:3px solid #f4ac00; outline-offset:3px; }
+.header-inner { gap:14px; }
+#header nav { min-width:0; }
+#header nav a { font-size:12.5px; padding-inline:10px; }
+.nav-toggle { display:none; border:1px solid #e4e9f1; background:#fff; color:var(--primary); border-radius:12px; width:46px; height:46px; align-items:center; justify-content:center; font-size:20px; cursor:pointer; flex-shrink:0; }
+.hero-wrap { min-height:540px; height:min(76vh,730px); }
+.hero-overlay { background:linear-gradient(90deg,rgba(7,26,61,.96) 0%,rgba(7,26,61,.86) 42%,rgba(7,26,61,.35) 100%); }
+.hero-content h1 { letter-spacing:-.025em; text-wrap:balance; }
+.hero-content p { text-wrap:pretty; }
+.hero-bg { background-repeat:no-repeat; }
+.service-card,.industry-card,.project-card,.why-card,.collab-card { will-change:auto; }
+.contact-form input,.contact-form select,.contact-form textarea,.modal-box input,.modal-box select,.modal-box textarea { max-width:100%; }
+img { height:auto; }
+@media(max-width:1150px) {
+  #header nav a { padding-inline:7px; font-size:12px; }
+  .header-inner { padding-inline:18px; }
+  .logo-text span { font-size:9px; }
+}
+@media(max-width:1020px) {
+  .topbar { display:none; }
+  .header-inner { height:70px; padding:0 20px; }
+  .nav-toggle { display:flex; order:3; }
+  #header .nav-cta { margin-left:auto; padding:11px 15px; }
+  #header nav { position:absolute; top:100%; left:0; right:0; max-height:calc(100dvh - 70px); overflow-y:auto; overscroll-behavior:contain; padding:10px 20px 24px; background:rgba(255,255,255,.99); box-shadow:0 20px 40px rgba(7,26,61,.13); border-top:1px solid #e8edf5; display:none; flex-direction:column; align-items:stretch; gap:4px; }
+  #header.nav-open nav { display:flex; animation:navEnter .2s ease both; }
+  #header nav a { display:block; font-size:15px; padding:13px 15px; border-radius:10px; white-space:normal; }
+  #header nav a::after { display:none; }
+  #header .drop-menu { position:static; visibility:visible; opacity:1; transform:none; display:none; box-shadow:none; border:0; background:#f4f7fc; padding:6px; margin:3px 0 8px; min-width:0; }
+  #header .drop.is-open .drop-menu { display:block; }
+  #header .drop-menu a { padding:11px 15px; font-size:13px; }
+  #header .drop > a { display:flex; align-items:center; justify-content:space-between; }
+  #header .drop > a::before { content:'+'; order:2; font-size:20px; font-weight:400; }
+  #header .drop.is-open > a::before { content:'−'; }
+  .about-grid,.hrco-grid,.founder-grid,.contact-grid { grid-template-columns:1fr; gap:30px; }
+  .founder-img-wrap { max-width:420px; margin:auto; width:100%; }
+  .services-grid,.industries-grid,.projects-grid,.why-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .impact-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .partners-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@keyframes navEnter { from { opacity:0; transform:translateY(-8px) } to { opacity:1; transform:none } }
+@media(max-width:640px) {
+  html { scroll-padding-top:76px; }
+  .wrap,.stats-row,.hero-content { padding-left:20px; padding-right:20px; }
+  section,.about-sec,.hrco-sec,.services-sec,.industries-sec,.why-sec,.founder-sec,.projects-sec,.contact-sec,.partners-sec,.collab-sec { padding-top:56px; padding-bottom:56px; }
+  .section-head { margin-bottom:30px; }
+  .section-head h2 { font-size:clamp(26px,7.2vw,34px); }
+  .section-head p { font-size:14px; }
+  .header-inner { padding-inline:14px; height:66px; }
+  .logo { gap:7px; min-width:0; }
+  .logo img { height:42px; width:42px; object-fit:contain; }
+  .logo-text strong { font-size:12px; }
+  .logo-text span { font-size:8px; line-height:1.35; }
+  .nav-toggle { width:42px; height:42px; }
+  #header .nav-cta { font-size:11px; padding:10px 11px; }
+  #header nav { max-height:calc(100dvh - 66px); }
+  .hero-wrap { height:auto; min-height:570px; height:calc(100svh - 66px); max-height:720px; }
+  .hero-overlay { background:linear-gradient(0deg,rgba(7,26,61,.97),rgba(7,26,61,.83) 60%,rgba(7,26,61,.55)); }
+  .hero-content { padding-top:35px; padding-bottom:55px; }
+  .hero-content h1 { font-size:clamp(31px,8.5vw,43px); line-height:1.14; }
+  .hero-content p { font-size:14px; line-height:1.7; }
+  .hero-tag { font-size:10px; max-width:100%; line-height:1.5; }
+  .hero-btns { gap:10px; }
+  .hero-btns a,.hero-btns button { padding:13px 17px; font-size:12px; min-height:46px; display:inline-flex; align-items:center; justify-content:center; }
+  .hero-arrows { top:auto; bottom:50px; padding-inline:18px; }
+  .hero-arrows .arrow { width:36px; height:36px; font-size:13px; }
+  .hero-dots { bottom:20px; }
+  .stats-row { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; }
+  .stat-item { padding:16px 8px; border-bottom:1px solid rgba(255,255,255,.1); }
+  .stat-num { font-size:29px; }
+  .services-grid,.industries-grid,.projects-grid,.why-grid,.impact-grid { grid-template-columns:1fr; gap:16px; }
+  .impact-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .service-card,.why-card { padding:24px 20px; }
+  .about-img img { height:300px; }
+  .founder-img-wrap img { height:auto; max-height:470px; }
+  .awards-wrap { grid-template-columns:1fr; }
+  .founder-row { flex-wrap:wrap; justify-content:center; }
+  .contact-info,.contact-form { padding:25px 18px; }
+  .partners-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .collab-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .collab-card { min-width:0; }
+  .modal-overlay { padding:10px; }
+  .modal-box { width:min(100%,540px); max-height:calc(100dvh - 20px); overflow-y:auto; }
+  .bank-row { flex-wrap:wrap; gap:8px; overflow-wrap:anywhere; }
+  .fixed-donate { bottom:14px; }
+  .wa-btn { bottom:76px; }
+  .footer-bottom { gap:12px; text-align:center; }
+}
+@media(max-width:380px) {
+  .logo-text span { display:none; }
+  #header .nav-cta { font-size:10px; padding:9px; }
+  .hero-content h1 { font-size:29px; }
+  .hero-btns a { padding:11px 13px; }
+}
+@media(hover:none) { .service-card:hover,.project-card:hover,.industry-card:hover,.why-card:hover,.collab-card:hover { transform:none; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
   </style>
 </head>
 
@@ -7274,7 +7377,7 @@
           <span>Empowering Communities Since 2020</span>
         </div>
       </div>
-      <nav>
+      <nav id="primaryNav" aria-label="Main navigation">
         <a onclick="showPage('home')">Home</a>
         <div class="drop">
           <a>About ▾</a>
@@ -7305,10 +7408,10 @@
         <a onclick="showPage('home');goTo('#contact')">Contact</a>
       </nav>
       <button class="nav-cta" onclick="openDonate()">Donate Now ❤</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav"><i class="fas fa-bars" aria-hidden="true"></i></button>
     </div>
   </div>
 
-  <button class="fixed-donate" onclick="openDonate()">Donate Now ❤</button>
   <a href="https://wa.me/919603657575" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"
       style="color:#fff;font-size:22px"></i></a>
 
@@ -7868,193 +7971,180 @@
     </section>
 
     <!-- COLLABORATIONS - UPDATED FULL LOGO SECTION -->
-    <section class="collab-sec" id="collaborations">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div
-            style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#071A3D,#0A66C2);color:#fff;padding:10px 22px;border-radius:50px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;border-left:4px solid #FFB800;box-shadow:0 8px 20px rgba(7,26,61,.15);margin-bottom:12px;">
-            <i class="fas fa-handshake" style="color:#FFB800;"></i>
-            Collaborations
-          </div>
-          <h2>Companies Associated With Our Job Fairs</h2>
-          <p>80+ leading companies across IT, healthcare, BFSI, retail, manufacturing, logistics and service sectors
-            associated with Nipuna HDS job fairs and placement drives.</p>
-        </div>
-
-        <div class="collab-grid reveal">
+  <div class="collab-grid reveal">
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780577437/copy_of_buydesi_hywjdk.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794475510/buydesi_logo.jpg"
               alt="BuyDesi" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">BuyDesi</span>
           </div>
           <div class="collab-card">
             <img
-              src="https://res.cloudinary.com/djahytrwo/image/upload/v1780554694/WhatsApp_Image_2026-06-04_at_11.56.09_hsqend.jpg"
+              src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794475510/Hrco_Logo.png"
               alt="HR Co" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">HR Co</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905679/Zoho-logo_wh7bsw.png" alt="ZOHO"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/01_Zoho.png" alt="ZOHO"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">ZOHO</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905676/Wipro_logo_ivvquu.svg" alt="WIPRO"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/02_Wipro.png" alt="WIPRO"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">WIPRO</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905674/ashok_layland_rouw5r.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/03_Ashok_Leyland.png"
               alt="Ashok Leyland" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Ashok Leyland</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905672/hcl_czs8nv.png" alt="HCL"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/04_HCL.png" alt="HCL"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">HCL</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905671/tech_mahindra_p1anid.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/05_Tech_Mahindra.png"
               alt="Tech Mahindra" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Tech Mahindra</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905669/hexaware_siufpb.jpg" alt="Hexaware"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/06_Hexaware.png" alt="Hexaware"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Hexaware</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905667/raoyal_enfield_y8rufs.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/07_Royal_Enfield.png"
               alt="Royal Enfield" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Royal Enfield</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905665/2coms_zpzfd0.png" alt="2COMS"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/08_2COMS.png" alt="2COMS"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">2COMS</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905658/bigc_dzljqq.png" alt="BIG C"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/09_Big_C.png" alt="BIG C"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">BIG C</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905612/biuilding_blocks_tarjkd.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/10_Building_Blocks.png"
               alt="Building Blocks" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Building Blocks</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780905562/jsr_groups_euykhi.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/11_JSR_Group_SunCity.png"
               alt="JSR Groups" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">JSR Groups</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780909248/apollo_toipov.png" alt="Apollo"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/13_Apollo_Hospitals.png" alt="Apollo"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Apollo</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780909249/bnew_mobiles_bnviha.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/12_BNEW.png"
               alt="BNew Mobiles" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">BNew Mobiles</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780910715/assan_jobs_f8mzx7.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/14_AasaanJobs.png"
               alt="Assan Jobs" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Assan Jobs</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780910714/asandalya_oxxomm.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/15_Unknown_15.png"
               alt="Asandalya" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Asandalya</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780979525/awaze_bbfbrt.jpg" alt="Awaze"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/17_Awaze.png" alt="Awaze"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Awaze</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780910713/bigbasket_ybcllf.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/18_Bigbasket.png"
               alt="BigBasket" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">BigBasket</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780910712/terrago_ubkqpm.png" alt="Terrago"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/19_Terrago.png" alt="Terrago"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Terrago</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780910711/fcb_hto4uc.png" alt="FCB"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/20_FCB_Solutions.png" alt="FCB"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">FCB</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980037/calibehr_vdvnqf.png" alt="CalibeHR"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/21_Calibehr.png" alt="CalibeHR"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">CalibeHR</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980037/factset_rgple4.png" alt="FactSet"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/24_Factset.png" alt="FactSet"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">FactSet</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980037/ebix_class_xpu6vl.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/22_EbixCash_Global_Services.png"
               alt="EbixCash" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">EbixCash</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/firstcall_bpo_jektbi.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/27_Firstcall_BPO.png"
               alt="FirstCall BPO" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">FirstCall BPO</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/flipcrat_cmxb7s.png" alt="Flipkart"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/30_Flipkart.png" alt="Flipkart"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Flipkart</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/call_for_jobs_luj28l.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/26_Call_For_Jobs.png"
               alt="Call For Jobs" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Call For Jobs</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/kipl_ecmf6c.jpg" alt="KIPL"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/25_CIPL.png" alt="KIPL"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">KIPL</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/corpone_oyy6jp.png" alt="Corpone"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/28_CorpOne.png" alt="Corpone"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Corpone</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/human_first_huzw1f.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/31_Human_First.png"
               alt="Human First" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Human First</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980036/first_allied_w6gkbu.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/29_First_Allied.png"
               alt="First Allied" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">First Allied</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980891/hdbc_aia3na.png" alt="HDBC"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/32_HDB_Financial_Services.png" alt="HDBC"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">HDBC</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980891/forte_ko1azx.png" alt="Forte"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/33_Forte.png" alt="Forte"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Forte</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980891/3g_hr_services_a9jv9z.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/34_3G_HR_Services.png"
               alt="3G HR Services" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">3G HR Services</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980891/surya_n1gp48.png" alt="Surya"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/36_Surya.png" alt="Surya"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Surya</span>
           </div>
@@ -8064,7 +8154,7 @@
             <span class="collab-name" style="display:none">JIM</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980891/jm_bxhite.png" alt="JM"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/38_JM.png" alt="JM"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">JM</span>
           </div>
@@ -8080,23 +8170,23 @@
             <span class="collab-name" style="display:none">I Pro</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780980890/kapston_services_j2szwp.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/40_Kapston_Services.png"
               alt="Kapston Services"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Kapston Services</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983065/reliance_rhpft7.png" alt="Reliance"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/36_Reliance_Nippon_Life_Insurance.png" alt="Reliance"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Reliance</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981513/aster_pharmacy_zyogs3.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/47_Aster_Pharmacy.png"
               alt="Aster Pharmacy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Aster Pharmacy</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981513/hectro_a5lwjv.png" alt="Hetero"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/48_Hetero.png" alt="Hetero"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Hetero</span>
           </div>
@@ -8106,79 +8196,79 @@
             <span class="collab-name" style="display:none">N1</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981512/synchro_services_twfyv4.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/44_SynchroServe.png"
               alt="Synchro Services"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Synchro Services</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981512/dr.reddy_s_y0n3bf.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/50_Dr_Reddys.png"
               alt="Dr. Reddy’s" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Dr. Reddy’s</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981511/money_yoga_r88em0.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/03_Money_Yogya.png"
               alt="Money Yoga" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Money Yoga</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981512/apollo1_nzkt55.png" alt="Apollo"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/49_Apollo_Pharmacy.png" alt="Apollo"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Apollo</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981511/biophore_efgoxu.png" alt="Biophore"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/01_Biophore.png" alt="Biophore"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Biophore</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780981511/kakathiya_smq2t7.png" alt="Kakatiya"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/02_Kakatiya_Developers.png" alt="Kakatiya"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Kakatiya</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982945/jio_cmjd00.png" alt="Jio"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/23_Jio.png" alt="Jio"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Jio</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982602/rainbow_hq5iza.png" alt="Rainbow"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/05_Rainbow_Childrens_Hospital.png" alt="Rainbow"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Rainbow</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982597/ncl_group_c6i2ev.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/06_NCL_Group.png"
               alt="NCL Group" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">NCL Group</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982597/prompt_g3itah.png" alt="Prompt"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/08_Prompt_Personnel.png" alt="Prompt"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Prompt</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982596/msn_wemg4n.png" alt="MSN"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/10_MSN.png" alt="MSN"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">MSN</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982596/konnect_n75vfg.png" alt="Konnect"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/09_Connect_Diagnostics.png" alt="Konnect"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Konnect</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982594/pulse_hanobz.png" alt="Pulse"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/11_Pulse.png" alt="Pulse"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Pulse</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982594/navatro_jjlugk.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/12_Nava_Road_Transport.png"
               alt="Navata Road Transport"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Navata Road Transport</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982594/omullane_g8eluq.png" alt="O’Mullane"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/13_Omullane.png" alt="O’Mullane"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">O’Mullane</span>
           </div>
@@ -8188,22 +8278,22 @@
             <span class="collab-name" style="display:none">OM Logistics</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780982593/chaipoint_xl5fmn.jpg"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/15_Chalpoint.png"
               alt="Chai Point" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Chai Point</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983437/medplus_soqpw2.png" alt="MedPlus"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/17_MedPlus.png" alt="MedPlus"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">MedPlus</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983436/uess_r6g85y.png" alt="UESS"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/28_Quess.png" alt="UESS"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">UESS</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983436/sbi_qrozcb.png" alt="SBI"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/37_SBI_Card.png" alt="SBI"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">SBI</span>
           </div>
@@ -8213,7 +8303,7 @@
             <span class="collab-name" style="display:none">ICICI Bank</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983669/mahindra_logistics_chu59h.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/46_Mahindra_Logistics.png"
               alt="Mahindra Logistics"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Mahindra Logistics</span>
@@ -8225,23 +8315,21 @@
             <span class="collab-name" style="display:none">Mahindra Finance</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983668/rabsa_xfp2fp.png" alt="Rabsa"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/29_Rabsa.png" alt="Rabsa"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">Rabsa</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983981/TATA_STRIVE_bc25th.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/25_Tata_Strive.png"
               alt="TATA STRIVE" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">TATA STRIVE</span>
           </div>
           <div class="collab-card">
-            <img src="https://res.cloudinary.com/djahytrwo/image/upload/v1780983981/TEAM_LEASE_wjqate.png"
+            <img src="https://res.cloudinary.com/kzm4hq51/image/upload/v1794474665/26_TeamLease.png"
               alt="TeamLease" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
             <span class="collab-name" style="display:none">TeamLease</span>
           </div>
         </div>
-      </div>
-    </section>
 
     <!-- CTA -->
     <div class="cta-sec">
@@ -11857,6 +11945,28 @@
   </footer>
 
   <script>
+
+    // Accessible responsive navigation; preserves existing page routing.
+    (function(){
+      var header=document.getElementById('header');
+      var toggle=document.getElementById('navToggle');
+      var nav=document.getElementById('primaryNav');
+      function closeMenu(){header.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open menu');toggle.innerHTML='<i class="fas fa-bars" aria-hidden="true"></i>';nav.querySelectorAll('.drop').forEach(function(d){d.classList.remove('is-open');});}
+      toggle.addEventListener('click',function(){var open=!header.classList.contains('nav-open');if(open){header.classList.add('nav-open');toggle.setAttribute('aria-expanded','true');toggle.setAttribute('aria-label','Close menu');toggle.innerHTML='<i class="fas fa-times" aria-hidden="true"></i>';}else closeMenu();});
+      nav.addEventListener('click',function(e){
+        var link=e.target.closest('a');if(!link)return;
+        var drop=link.parentElement;
+        if(window.innerWidth<=1020 && drop.classList.contains('drop') && link.parentElement===drop){
+          if(!drop.classList.contains('is-open')){e.preventDefault();e.stopPropagation();nav.querySelectorAll('.drop').forEach(function(d){if(d!==drop)d.classList.remove('is-open');});drop.classList.add('is-open');return;}
+          if(!link.hasAttribute('onclick')){e.preventDefault();drop.classList.remove('is-open');return;}
+        }
+        closeMenu();
+      });
+      document.addEventListener('click',function(e){if(!header.contains(e.target))closeMenu();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+      window.addEventListener('resize',function(){if(window.innerWidth>1020)closeMenu();});
+    })();
+
     // PAGE SYSTEM
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
